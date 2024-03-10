@@ -14,62 +14,62 @@ interface itemsProps {
 
 const items: itemsProps[] = [
   {
-    item: 'https://kickstorage.blob.core.windows.net/logo/gangwon_fc.svg',
+    item: 'public/assets/TeamLogo/강원FC.png',
     home_team_name: '강원',
     name: '강원FC',
   },
   {
-    item: 'https://kickstorage.blob.core.windows.net/logo/gwangju_fc.svg',
+    item: 'public/assets/TeamLogo/광주FC.png',
     home_team_name: '광주',
     name: '광주FC',
   },
   {
-    item: 'https://kickstorage.blob.core.windows.net/logo/daegu_fc.svg',
+    item: 'public/assets/TeamLogo/김천상무.png',
+    home_team_name: '김천',
+    name: '김천상무FC',
+  },
+  {
+    item: 'public/assets/TeamLogo/대구FC.png',
     home_team_name: '대구',
     name: '대구FC',
   },
   {
-    item: 'https://kickstorage.blob.core.windows.net/logo/daejun_hana_citizen.svg',
+    item: 'public/assets/TeamLogo/대전하나시티즌.png',
     home_team_name: '대전',
     name: '대전하나시티즌',
   },
   {
-    item: 'https://kickstorage.blob.core.windows.net/logo/suwon_samsung_bluewings.svg',
-    home_team_name: '수원',
-    name: '수원삼성블루윙즈',
-  },
-  {
-    item: 'https://kickstorage.blob.core.windows.net/logo/suwon_fc.svg',
+    item: 'public/assets/TeamLogo/수원FC.png',
     home_team_name: '수원FC',
     name: '수원FC',
   },
   {
-    item: 'https://kickstorage.blob.core.windows.net/logo/ulsan_hyundai.svg',
+    item: 'public/assets/TeamLogo/울산HD.png',
     home_team_name: '울산',
-    name: '울산현대',
+    name: '울산HD',
   },
   {
-    item: 'https://kickstorage.blob.core.windows.net/logo/incheon_united.svg',
+    item: 'public/assets/TeamLogo/인천유나이티드.png',
     home_team_name: '인천',
     name: '인천유나이티드',
   },
   {
-    item: 'https://kickstorage.blob.core.windows.net/logo/jeonbuk_hyundai_motors.svg',
+    item: 'public/assets/TeamLogo/전북현대모터스.png',
     home_team_name: '전북',
     name: '전북현대모터스',
   },
   {
-    item: 'https://kickstorage.blob.core.windows.net/logo/jeju_united.svg',
+    item: 'public/assets/TeamLogo/제주유나이티드.png',
     home_team_name: '제주',
     name: '제주유나이티드',
   },
   {
-    item: 'https://kickstorage.blob.core.windows.net/logo/pohang_stealus.svg',
+    item: 'public/assets/TeamLogo/포항스틸러스.png',
     home_team_name: '포항',
     name: '포항스틸러스',
   },
   {
-    item: 'https://kickstorage.blob.core.windows.net/logo/fc_seoul.svg',
+    item: 'public/assets/TeamLogo/FC서울.png',
     home_team_name: '서울',
     name: 'FC서울',
   },

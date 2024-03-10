@@ -3,8 +3,7 @@ import styled from 'styled-components';
 import 'react-datepicker/dist/react-datepicker.css';
 import { useLocation, useNavigate } from 'react-router-dom';
 import { getCookie } from '@/util/cookieFn';
-import { useSelector } from 'react-redux';
-import { RootState } from '@/app/store';
+
 import { BASE_URL } from '@/config';
 import { AccompanyPostReal } from '@/lib/interface';
 import AccompanyBox from '../MyAccompany/AccompanyBox';
@@ -16,7 +15,6 @@ const headers = {
 type Props = {};
 
 const MultiFilter = (props: Props) => {
-  const { id, isAuthenticated } = useSelector((state: RootState) => state.auth);
 
   const [cardList, setCardList] = useState<[]>();
   const navigate = useNavigate();
@@ -218,43 +216,43 @@ const FILTER_CATEGORYS = [
     title: '구단별',
     contents: [
       [
-        'https://kickstorage.blob.core.windows.net/logo/gangwon_fc.svg',
+        'public/assets/TeamLogo/강원FC.png',
         '강원FC',
       ],
       [
-        'https://kickstorage.blob.core.windows.net/logo/gwangju_fc.svg',
+        'public/assets/TeamLogo/광주FC.png',
         '광주FC',
       ],
-      ['https://kickstorage.blob.core.windows.net/logo/daegu_fc.svg', '대구FC'],
       [
-        'https://kickstorage.blob.core.windows.net/logo/daejun_hana_citizen.svg',
+        'public/assets/TeamLogo/김천상무.png',
+        '김천상무FC',
+      ],
+      ['public/assets/TeamLogo/대구FC.png', '대구FC'],
+      [
+        'public/assets/TeamLogo/대전하나시티즌.png',
         '대전하나시티즌',
       ],
+      ['public/assets/TeamLogo/FC서울.png', 'FC서울'],
       [
-        'https://kickstorage.blob.core.windows.net/logo/suwon_samsung_bluewings.svg',
-        '수원삼성블루윙즈',
-      ],
-      ['https://kickstorage.blob.core.windows.net/logo/fc_seoul.svg', 'FC서울'],
-      [
-        'https://kickstorage.blob.core.windows.net/logo/pohang_stealus.svg',
+        'public/assets/TeamLogo/포항스틸러스.png',
         '포항스틸러스',
       ],
       [
-        'https://kickstorage.blob.core.windows.net/logo/jeju_united.svg',
+        'public/assets/TeamLogo/제주유나이티드.png',
         '제주유나이티드',
       ],
       [
-        'https://kickstorage.blob.core.windows.net/logo/incheon_united.svg',
+        'public/assets/TeamLogo/인천유나이티드.png',
         '인천유나이티드',
       ],
       [
-        'https://kickstorage.blob.core.windows.net/logo/ulsan_hyundai.svg',
-        '울산현대',
+        'public/assets/TeamLogo/울산HD.png',
+        '울산HD',
       ],
-      ['https://kickstorage.blob.core.windows.net/logo/suwon_fc.svg', '수원FC'],
+      ['public/assets/TeamLogo/수원FC.png', '수원FC'],
 
       [
-        'https://kickstorage.blob.core.windows.net/logo/jeonbuk_hyundai_motors.svg',
+        'public/assets/TeamLogo/전북현대모터스.png',
         '전북현대모터스',
       ],
     ],

@@ -3,8 +3,7 @@ import styled from 'styled-components';
 import AccompanyBox from '../MyAccompany/AccompanyBox';
 import { AccompanyPostReal } from '@/lib/interface';
 import { useNavigate } from 'react-router-dom';
-import { useSelector } from 'react-redux';
-import { RootState } from '@/app/store';
+
 import { getCookie } from '@/util/cookieFn';
 import { BASE_URL } from '@/config';
 const token = getCookie('token');
@@ -15,7 +14,6 @@ type Props = {};
 
 const AccompanyList = (props: Props) => {
   const navigate = useNavigate();
-  const id = useSelector((state: RootState) => state.auth.id);
   const [accompanyList, setaccompanyList] = useState([]);
   useEffect(() => {
     async function fetchData() {
