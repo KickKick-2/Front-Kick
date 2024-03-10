@@ -3,6 +3,8 @@ import styled from 'styled-components';
 import KakaoForm from '../../components/Login/KakaoForm';
 import { useNavigate } from 'react-router-dom';
 import { customMedia } from '@/util/GlobalStyle';
+import KakaoLoginImage from '/public/assets/kakao_login_medium_wide.png';
+
 type Props = {};
 
 const Login = (props: Props) => {
@@ -12,7 +14,7 @@ const Login = (props: Props) => {
       <LoginHeader />
       <LoginTitle>함께 가는 축구 여행, 킥킥</LoginTitle>
       <LoginBox>
-        {/* <KakaoForm /> */}
+        <KakaoForm />
         <EmailLoginBox
           onClick={() => {
             navigate('/emaillogin');
@@ -20,6 +22,7 @@ const Login = (props: Props) => {
         >
           이메일 로그인
         </EmailLoginBox>
+
       </LoginBox>
       <TextBox>
         <div>아직 계정이 없으신가요?</div>
@@ -61,6 +64,19 @@ const EmailLoginBox = styled.div`
   height: 60px;
   border-radius: 5px;
   background-color: #898989;
+  cursor: pointer;
+   ${customMedia.lessThan('mobile')`
+		width: 250px;
+	`}
+`;
+
+const KaKaoLoginBox = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 360px;
+  height: 60px;
+  border-radius: 5px;
   cursor: pointer;
    ${customMedia.lessThan('mobile')`
 		width: 250px;

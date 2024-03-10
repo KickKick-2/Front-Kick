@@ -3,46 +3,68 @@ import client from './client';
 import { getCookie } from '@/util/cookieFn';
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { API_URL } from '@/config';
 const token = getCookie('token');
 
-interface Login {
-  user: {
-    id: string;
-    email: string;
-    name: string;
-    phone_number: string;
-    gender: string;
-    birth_date: string;
-    agree_terms_of_service: boolean;
-  };
-  message: string;
-  token: {
-    access: string;
-    refresh: string;
-  };
-}
+// interface Login {
+//   user: {
+//     id: string;
+//     email: string;
+//     name: string;
+//     phone_number: string;
+//     gender: string;
+//     birth_date: string;
+//     agree_terms_of_service: boolean;
+//   };
+//   message: string;
+//   token: {
+//     access: string;
+//     refresh: string;
+//   };
+// }
 // 로그인 요청을 보내는 함수
-export const login = async (email: string, password: string) => {
-  try {
-    const res: Login = await client('/api/user/auth/', {
-      method: 'post',
-      data: {
-        email,
-        password,
-      },
-    });
-    if (res !== undefined) {
-      return res;
-    }
-  } catch (error) {
-    if (error instanceof AxiosError) {
-      toast.error('로그인 실패!');
-      return {
-        data: error?.response?.data,
-      };
-    }
+// export const login = async (email: string, password: string) => {
+//   try {
+//     const res: Login = await client('/member/login', {
+//       method: 'post',
+//       data: {
+//         email,
+//         password,
+//       },
+//     });
+//     if (res !== undefined) {
+//       return res;
+//     }
+//   } catch (error) {
+//     if (error instanceof AxiosError) {
+//       toast.error('로그인 실패!');
+//       return {
+//         data: error?.response?.data,
+//       };
+//     }
+//   }
+// };
+export interface APIBody {
+  success: boolean;
+  message: string;
+  data: {
+    username:string;
+    token:string;
   }
-};
+}
+export const login = async(email:string, passwords:string) => {
+  const form = {email:email, passwords:passwords}
+  const formData:string = JSON.stringify(form)
+  const response = await fetch(`${API_URL}/member/login`, {
+    method:"POST",
+    headers: {
+      "Content-Type":"application/json",
+    },
+    body: formData
+  })
+  const responseData:APIBody = await response.json()
+  return responseData
+}
 export const logout = async (email: string, password: string) => {
   try {
     const res = await client('/api/user/auth/', {

@@ -1,11 +1,8 @@
 import { createSlice } from '@reduxjs/toolkit';
 
 export interface InitialState {
-  id: string;
-  email: string;
-  name: string;
-  token: string;
-  profileImg: string;
+  username:string;
+  token:string;
   isAuthenticated: boolean;
 }
 
@@ -14,11 +11,8 @@ export interface autoCheck {
 }
 
 const initialState: InitialState = {
-  id: '',
-  email: '',
-  name: '',
+  username: '',
   token: '',
-  profileImg: '',
   isAuthenticated: false,
 };
 
@@ -27,19 +21,13 @@ const authSlice = createSlice({
   initialState,
   reducers: {
     setUser: (state: InitialState, action) => {
-      state.id = action.payload.id;
-      state.email = action.payload.email;
-      state.name = action.payload.name;
+      state.username = action.payload.username;
       state.token = action.payload.token;
-      state.profileImg = action.payload.profileImg;
       state.isAuthenticated = true;
     },
     logOutAction: (state) => {
-      state.id = '';
-      state.email = '';
-      state.name = '';
+      state.username = '';
       state.token = '';
-      state.profileImg = '';
       state.isAuthenticated = false;
     },
   },

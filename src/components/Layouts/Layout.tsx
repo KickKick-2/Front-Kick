@@ -2,13 +2,14 @@ import Header from './Header';
 import Footer from './Footer';
 import styled from 'styled-components';
 import { customMedia } from '@/util/GlobalStyle';
+import { Outlet } from 'react-router-dom';
 
 const Layout = (props: { children: React.ReactNode }) => {
   return (
     <>
       <Header />
 
-      <Main>{props.children}</Main>
+      <Main><Outlet/></Main>
 
       <Footer />
     </>
