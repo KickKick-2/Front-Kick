@@ -2,7 +2,7 @@ import { useEffect } from 'react';
 import { useForm, SubmitHandler } from 'react-hook-form';
 import { Link, useNavigate } from 'react-router-dom';
 import styled from 'styled-components';
-import { login } from '@/lib/api';
+import { APIBody, login } from '@/lib/api';
 import { setCookie } from '@/util/cookieFn';
 import { useDispatch, useSelector } from 'react-redux';
 import { autoCheck, setUser } from '@/feature/authSlice';
@@ -36,33 +36,48 @@ const LoginForm = (props: any) => {
 
   const onSubmit: SubmitHandler<FormValue> = async (data) => {
     try {
+
       const { email, password } = data;
-      const res = await login(email, password);
-      if (res !== undefined) {
-        if ('user' in res) {
-          dispatch(
-            setUser({
-              id: res.user.id,
-              email: res?.user?.email,
-              name: res?.user?.name,
-              token: res?.token?.access,
-              isAuthenticated: true,
-            }),
-          );
-          if (res.token.access) {
-            toast.success('로그인 성공!');
-            setCookie('token', `${res.token.access}`, {
-              path: '/',
-            });
-            setCookie('refresh', `${res.token.refresh}`, {
-              path: '/',
-            });
-          }
-        }
+      // const res = await login(email, password);
+      const res:APIBody = await login(email,password);
+      
+      if(res.success){
+        dispatch(
+          setUser({
+            username: res.data.username,
+            token: res.data.token,
+            isAuthenticated: true
+          })
+        )
+        navigate("/")
       } else {
-        console.error('res is undefined');
-        toast.error('로그인 실패!');
+        alert(res.message)
       }
+    //   if (res !== undefined) {
+    //     if ('user' in res) {
+    //       dispatch(
+    //         setUser({
+    //           id: res.user.id,
+    //           email: res?.user?.email,
+    //           name: res?.user?.name,
+    //           token: res?.token?.access,
+    //           isAuthenticated: true,
+    //         }),
+    //       );
+    //       if (res.token.access) {
+    //         toast.success('로그인 성공!');
+    //         setCookie('token', `${res.token.access}`, {
+    //           path: '/',
+    //         });
+    //         setCookie('refresh', `${res.token.refresh}`, {
+    //           path: '/',
+    //         });
+    //       }
+    //     }
+    //   } else {
+    //     console.error('res is undefined');
+    //     toast.error('로그인 실패!');
+    //   }
     } catch (error) {
       toast.error('로그인 실패!');
     }
@@ -92,7 +107,7 @@ const LoginForm = (props: any) => {
           {...register('password', {
             required: '비밀번호는 필수 입력입니다.',
             minLength: {
-              value: 7,
+              value: 4,
               message: '7자리 이상 비밀번호를 입력하세요.',
             },
             validate: {

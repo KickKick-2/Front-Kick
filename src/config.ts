@@ -8,3 +8,5 @@ export const SERPAPI_KEY =
   '230bfc8d93b1400778f5f64ed746ec657a935cd99358db14a68b8e8f19aca2a8';
 
 export const BASE_URL = 'https://kick-back.azurewebsites.net';
+
+export const API_URL = "http://ec2-52-91-187-219.compute-1.amazonaws.com:4000";

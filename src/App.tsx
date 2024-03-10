@@ -20,7 +20,6 @@ function App() {
         theme='light'
         limit={1} // 알람 개수 제한
       />
-      <Outlet />
     </Layout>
   );
 }
