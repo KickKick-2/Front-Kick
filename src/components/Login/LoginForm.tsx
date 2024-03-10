@@ -44,6 +44,8 @@ const LoginForm = (props: any) => {
       if(res.success){
         dispatch(
           setUser({
+            email: email,
+            passwords: password,
             username: res.data.username,
             token: res.data.token,
             isAuthenticated: true
