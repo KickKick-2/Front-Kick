@@ -13,7 +13,8 @@ export interface autoCheck {
 const initialState: InitialState = {
   username: '',
   token: '',
-  isAuthenticated: false,
+  // isAuthenticated: false,
+  isAuthenticated: true,
 };
 
 const authSlice = createSlice({
