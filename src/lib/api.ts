@@ -4,6 +4,7 @@ import { getCookie } from '@/util/cookieFn';
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { API_URL } from '@/config';
+import { memo } from 'react';
 const token = getCookie('token');
 
 // interface Login {
@@ -65,21 +66,25 @@ export const login = async(email:string, passwords:string) => {
   const responseData:APIBody = await response.json()
   return responseData
 }
-export const logout = async (email: string, password: string) => {
+export const logout = async (email: string, passwords: string) => {
   try {
-    const res = await client('/api/user/auth/', {
-      method: 'delete',
-      data: {
-        email,
-        password,
+    const form = {email:email, passwords:passwords}
+    const formData:string = JSON.stringify(form)
+    const response = await fetch(`${API_URL}/member/logout`,{
+      method:"POST",
+      headers:{
+        "Content-Type":"applicaton/json",
       },
-    });
-    return res;
+      body: formData
+    })
+
+    const responseData:APIBody = await response.json()
+    return responseData
+
   } catch (error) {
-    if (error instanceof AxiosError) {
-      return {
-        data: error?.response?.data,
-      };
+    return {
+      success: "fail",
+      message: error,
     }
   }
 };
