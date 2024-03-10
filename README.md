@@ -104,6 +104,6 @@ $ npm run build
 <br>
 
 ## Relative Repository
-+ [KickKick 2](https://github.com/KickKick-2-0)
++ [KickKick 2](https://github.com/KickKick-2)
 + [KickKick 2-BackEnd](private)
 + [KickKick](https://github.com/Team-2Win0Lose)
