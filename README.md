@@ -30,22 +30,44 @@ Name|GitHub|Email
 * * *
 
 ## Preview
+<details>
+<summary>🏠 홈 화면</summary>
+<div markdown="2">
+  <img src="https://github.com/KickKick-2/Front-Kick/assets/76212667/fc8ae193-e3e9-42b2-9ac3-7d91b2233f65" alt="preview" width="800"> <br>
 
-#### 1. Home
+  ##### 🏠 홈 화면
 
-<img src="https://github.com/KickKick-2-0/Front-Kick/assets/37996446/9d6a311f-63f2-48c5-bc3a-732e47667186" alt="preview" width="800">
+  
+</div>
+</details>
+<details>
+<summary>🚌 동행 찾기 기능</summary>
+<div markdown="1">
+<img width="728" alt="킥킥 메인화면" src="https://github.com/KickKick-2/Front-Kick/assets/76212667/2c523f00-3e90-4526-911c-6afdf12ffc0c">  <br>
+  
+ ##### 🚌 동행 찾기 기능 <br>
+ ###### 함께 축구 여정을 떠날 동행을 모집하고, 매칭해주는 게시판 기능입니다. 사용자들이 동행을 찾거나 다른 축구 팬들과 함께 여정을 공유하는 데 도움을 줍니다.
+</div>
+</details>
+<details>
+<summary>📆 동행 만들기 기능</summary>
+<div markdown="1">
+<img width="745" alt="킥킥 주변 관광지 추천" src="https://github.com/KickKick-2/Front-Kick/assets/76212667/df88441b-61e1-4c65-83f0-3e55a90dcdde"> <br>
 
-* * *
+  ##### 📆 동행 만들기 기능 <br>
+  ###### 축구 직관을 위해 타 지역 방문을 계획하는 사람들에게 해당 지역의 주변 관광지 정보를 추천해줍니다. 이 정보에는 맛집, 숙박, 관광 명소 등이 포함되어 있어, 사용자가 직관 이외에도 해당 지역 관광지를 다양하게 경험할 수 있도록 도와줍니다. 동행 일정을 등록하고 동행을 모집할 수 있으며 사용자는 원하는 컨셉의 동행 모집글을 선택해 해당 직관 동행에 참여할 수 있습니다.
+</div>
+</details>
+<details>
+<summary>⚽️ 응원 구단 선택</summary>
+<div markdown="1">
+<img width="740" alt="킥킥 응원 팀 선택" src="https://github.com/KickKick-2/Front-Kick/assets/76212667/19dad053-5750-47b9-9c09-57eb69ee481e"> <br>
+  
+  ##### ⚽️ 응원 구단 선택
+  ###### 회원가입 시 응원하는 축구 구단을 선택하는 기능을 제공합니다. 자신만의 응원 구단을 선정하 여 사용자는 같은 팀을 응원하는 다른 팬들과 소속감을 형성하고 경쟁의식을 가질 수 있습니 다. 응원 구단 랭킹을 통해 다른 팬덤과의 경쟁을 촉진하며, 팀 소속감과 결속력을 증진시킵니 다.
+</div>
+</details>
 
-#### 2. Find Recruitment
-
-<img src="https://github.com/KickKick-2-0/Front-Kick/assets/37996446/f5244196-5f56-45f9-9600-0d2e23c18fe3" alt="preview" width="800">
-
-* * *
-
-#### 3. Create Recruitment
-
-<img src="https://github.com/KickKick-2-0/Front-Kick/assets/37996446/fd9ff282-4b9f-4a90-b59e-77cdf57aa6c8" alt="preview" width="800">
 
 * * *
 
