@@ -9,7 +9,7 @@ const KakaoForm = (props: Props) => {
   };
   return (
     <div onClick={handleLogin}>
-      <KakaoLoginButton src='public/assets/kakao_login_medium_wide.png' />
+      <KakaoLoginButton src='public/assets/ServiceLogo/kakao_login_medium_wide.png' />
     </div>
   );
 };
