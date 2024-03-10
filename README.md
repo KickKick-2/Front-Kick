@@ -8,8 +8,7 @@
 | :------------------------------------------------------------------------------------------------------------------------: | :----------------------------------------------------------------------------------------------------------------------: | :--------------------------------------------------------------------------------------------------------------------: |
 | <a href="https://github.com/Jeongseunghun"><img src="https://avatars.githubusercontent.com/u/76212667?v=4" width=160/></a> | <a href="https://github.com/whtmdgn1409"><img src="https://avatars.githubusercontent.com/u/37996446?v=4" width=160/></a> | <a href="https://github.com/ChoiJongman22"><img src="https://avatars.githubusercontent.com/u/156563231?s=200&v=4" width=160/></a> |
 |                                                                                                                            |                                                                                                                          |                                                                                                                        | 
-
-<br><br>
+<br>
 
 - [정승훈](https://github.com/Jeongseunghun) - 프론트엔드 개발자
 - [조승후](https://github.com/whtmdgn1409) - 프론트엔드 개발자
