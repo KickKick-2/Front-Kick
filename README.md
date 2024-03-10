@@ -4,17 +4,16 @@
 
 ## 개발자
 
-|                                                          정승훈👑                                                          |                                                          조승후                                                          |                                                         최종헌                                                         |                         
+|                                                          정승훈👑                                                          |                                                          조승후                                                          |                                                         김영준                                                         |                                                         김진                                                         |
 | :------------------------------------------------------------------------------------------------------------------------: | :----------------------------------------------------------------------------------------------------------------------: | :--------------------------------------------------------------------------------------------------------------------: | :------------------------------------------------------------------------------------------------------------------: |
-| <a href="https://github.com/Jeongseunghun"><img src="https://avatars.githubusercontent.com/u/76212667?v=4" width=160/></a> | <a href="https://github.com/whtmdgn1409"><img src="https://avatars.githubusercontent.com/u/37996446?v=4" width=160/></a> | <a href="https://github.com/coke05288"><img src="https://avatars.githubusercontent.com/u/24985866?v=4" width=160/></a>|
+| <a href="https://github.com/Jeongseunghun"><img src="https://avatars.githubusercontent.com/u/76212667?v=4" width=160/></a> | <a href="https://github.com/whtmdgn1409"><img src="https://avatars.githubusercontent.com/u/37996446?v=4" width=160/></a> | <a href="https://github.com/coke05288"><img src="https://avatars.githubusercontent.com/u/24985866?v=4" width=160/></a> | <a href="https://github.com/aljinny"><img src="https://avatars.githubusercontent.com/u/98078785?v=4" width=160/></a> |
 |                                                                                                                            |                                                                                                                          |                                                                                                                        |                                                                                                                      |
 
 <br><br>
 
 - [정승훈](https://github.com/Jeongseunghun) - 프론트엔드 개발자
 - [조승후](https://github.com/whtmdgn1409) - 프론트엔드 개발자
-- [최종헌](https://github.com/aljinny) - 백엔드 개발자
-
+- [최종헌](https://github.com/ChoiJongman22) - 백엔드 개발자
 
 ## 기술 스택
 
