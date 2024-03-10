@@ -13,7 +13,7 @@ const Logo = () => {
         location.reload();
       }}
     >
-      <IMG src='/assets/officiallogo.png' alt='logo' />
+      <IMG src='/assets/ServiceLogo/officiallogo.png' alt='logo' />
     </Button>
   );
 };

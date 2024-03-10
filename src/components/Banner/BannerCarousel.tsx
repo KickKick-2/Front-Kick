@@ -21,22 +21,22 @@ const BannerCarousel = () => {
             <Slider {...settings}>
                 <Box>
                     <CenteredContent>
-                    <IMG src='/assets/banner4.png' alt='logo'/>
+                    <IMG src='/assets/Banner/banner4.png' alt='logo'/>
                     </CenteredContent>
                 </Box>
                 <Box>
                     <CenteredContent>
-                    <IMG src='/assets/banner3.png' alt='logo'/>
+                    <IMG src='/assets/Banner/banner3.png' alt='logo'/>
                     </CenteredContent>
                 </Box>
                 <Box>
                     <CenteredContent>
-                    <IMG src='/assets/banner2.png' alt='logo'/>
+                    <IMG src='/assets/Banner/banner2.png' alt='logo'/>
                     </CenteredContent>
                 </Box>
                 <Box>
                     <CenteredContent>
-                    <IMG src='/assets/banner1.png' alt='logo'/>
+                    <IMG src='/assets/Banner/banner1.png' alt='logo'/>
                     </CenteredContent>
                 </Box>
 
