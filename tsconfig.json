@@ -1,5 +1,6 @@
 {
   "compilerOptions": {
+    "types": ["jest", "node"],
     "target": "ESNext",
     "lib": ["DOM", "DOM.Iterable", "ESNext"],
     "module": "ESNext",
@@ -23,6 +24,7 @@
     "noUnusedParameters": false,
     "noFallthroughCasesInSwitch": true
   },
-  "include": ["src", "custom.d.ts", "src/components/Modal/TeamCardInfo.tsx"],
+  "include": ["src", "custom.d.ts", "src/components/Modal/TeamCardInfo.tsx", "src/__tests__"],
+
   "references": [{ "path": "./tsconfig.node.json" }]
 }
