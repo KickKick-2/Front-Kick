@@ -73,7 +73,7 @@ export const logout = async (email: string, passwords: string) => {
     const response = await fetch(`${API_URL}/member/logout`,{
       method:"POST",
       headers:{
-        "Content-Type":"applicaton/json",
+        "Content-Type":"application/json",
       },
       body: formData
     })
