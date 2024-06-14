@@ -13,12 +13,13 @@ import { customMedia } from '@/util/GlobalStyle';
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { useNavigate } from 'react-router-dom';
+import { logout } from '@/lib/api';
 
 function Sidebar({ isOpen, setIsOpen }: { isOpen: boolean; setIsOpen: any }) {
   const outside = useRef<any>();
   const [profileData, setprofileData] = useState() as any;
   const isLogin = useSelector((state: autoCheck) => state.auth.isAuthenticated);
-  const { token, id } = useSelector((state: RootState) => state.auth);
+  const { email,passwords } = useSelector((state: RootState) => state.auth);
   const dispatch = useDispatch();
   useEffect(() => {
     document.addEventListener('mousedown', handlerOutsie);
@@ -26,19 +27,20 @@ function Sidebar({ isOpen, setIsOpen }: { isOpen: boolean; setIsOpen: any }) {
       document.removeEventListener('mousedown', handlerOutsie);
     };
   });
-  const getUserProfile = useCallback(async () => {
-    const res = await fetch(`${BASE_URL}/api/user/profile/?id=${id}`, {
-      method: 'get',
-      headers: {
-        Authorization: `Bearer ${token}`,
-      },
-    });
-    const data = await res.json();
-    setprofileData(data);
-  }, []);
-  useEffect(() => {
-    getUserProfile();
-  }, [getUserProfile]);
+  // const getUserProfile = useCallback(async () => {
+  //   const res = await fetch(`${BASE_URL}/api/user/profile/?id=${id}`, {
+  //     method: 'get',
+  //     headers: {
+  //       Authorization: `Bearer ${token}`,
+  //     },
+  //   });
+  //   const data = await res.json();
+  //   setprofileData(data);
+  // }, []);
+  // useEffect(() => {
+  //   getUserProfile();
+  // }, [getUserProfile]);
+
   const handlerOutsie = (e: any) => {
     if (!outside.current.contains(e.target)) {
       toggleSide();
@@ -68,7 +70,10 @@ function Sidebar({ isOpen, setIsOpen }: { isOpen: boolean; setIsOpen: any }) {
     setIsOpen(false);
   };
   // console.log(profileData);
-
+  const handleLogout = async() => {
+    const resp = await logout(email, passwords)
+    alert(resp.message)
+  }
   return isLogin ? (
     <>
       {isOpen && <Backdrop onClick={toggleSide} />}
@@ -114,6 +119,7 @@ function Sidebar({ isOpen, setIsOpen }: { isOpen: boolean; setIsOpen: any }) {
           <Logout>
             <LogoutBtn
               onClick={() => {
+                handleLogout();
                 dispatch(logOutAction());
                 toggleSide();
                 toast.info('로그아웃되었습니다.');

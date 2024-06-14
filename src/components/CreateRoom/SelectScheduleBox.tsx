@@ -8,24 +8,23 @@ type Props = {
 
 const SelectScheduleBox = (props: Props) => {
   const changeNameToLogo = (teamName: string) => {
-    if (teamName === 'FC서울') return 'public/assets/teams/FC서울.png';
-    else if (teamName === '강원FC') return 'public/assets/teams/강원FC.png';
-    else if (teamName === '광주FC') return 'public/assets/teams/광주FC.png';
-    else if (teamName === '대구FC') return 'public/assets/teams/대구FC.png';
+    if (teamName === 'FC서울') return 'public/assets/TeamLogo/FC서울.png';
+    else if (teamName === '강원FC') return 'public/assets/TeamLogo/강원FC.png';
+    else if (teamName === '광주FC') return 'public/assets/TeamLogo/광주FC.png';
+    else if (teamName === '김천상무') return 'public/assets/TeamLogo/김천상무.png';
+    else if (teamName === '대구FC') return 'public/assets/TeamLogo/대구FC.png';
     else if (teamName === '대전하나시티즌')
-      return 'public/assets/teams/대전하나시티즌.png';
-    else if (teamName === '수원삼성블루윙즈')
-      return 'public/assets/teams/수원삼성블루윙즈.png';
-    else if (teamName === '수원FC') return 'public/assets/teams/수원FC.png';
-    else if (teamName === '울산현대') return 'public/assets/teams/울산현대.png';
+      return 'public/assets/TeamLogo/대전하나시티즌.png';
+    else if (teamName === '수원FC') return 'public/assets/TeamLogo/수원FC.png';
+    else if (teamName === '울산현대') return 'public/assets/TeamLogo/울산HD.png';
     else if (teamName === '인천유나이티드')
-      return 'public/assets/teams/인천유나이티드.png';
+      return 'public/assets/TeamLogo/인천유나이티드.png';
     else if (teamName === '전북현대모터스')
-      return 'public/assets/teams/전북현대모터스.png';
+      return 'public/assets/TeamLogo/전북현대모터스.png';
     else if (teamName === '제주유나이티드')
-      return 'public/assets/teams/제주유나이티드.png';
+      return 'public/assets/TeamLogo/제주유나이티드.png';
     else if (teamName === '포항스틸러스')
-      return 'public/assets/teams/포항스틸러스.png';
+      return 'public/assets/TeamLogo/포항스틸러스.png';
   };
   return (
     <Box>
